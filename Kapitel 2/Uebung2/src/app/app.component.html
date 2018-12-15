@@ -1,0 +1,20 @@
+<!-- The content below is only a placeholder and can be replaced. -->
+
+<div style="text-align:left">
+  <p>
+    Nachname: {{ user.vNachname }} <br />
+    Vorname: {{ user.vVorname }} <br />
+    Studiengang: {{ user.vStudiengang }} <br />
+    Fachsemester: {{ user.vFachsemester }} <br />
+    Student: {{ user.vStudent }} <br />
+    Bildungseinrichtung: {{ user.vBildungseinrichtung }}
+  </p>
+</div>
+
+<p><br /><br /><br /><b>Möglichkeit 2:</b> <br /></p>
+<p [innerHTML]="user.toString()"></p>
+
+
+<p><br /><br /><br /><b>Möglichkeit 3:</b> <br /></p>
+<p>{{ newUser() }}</p>
+<router-outlet></router-outlet>

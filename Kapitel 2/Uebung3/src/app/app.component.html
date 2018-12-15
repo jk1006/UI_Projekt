@@ -1,0 +1,20 @@
+<!-- The content below is only a placeholder and can be replaced. -->
+
+<div style="text-align:left">
+  <p>
+    Nachname: {{ vPerson.vNachname }} <br />
+    Vorname: {{ vPerson.vVorname }} <br />
+    Studiengang: {{ vPerson.vStudiengang }} <br />
+    Fachsemester: {{ vFachsemester }} <br />
+    Student: {{ vPerson.vStudent }} <br />
+    Bildungseinrichtung: {{ vPerson.vBildungseinrichtung }}
+  </p>
+</div>
+
+<p><br /><br /><br /><b>Möglichkeit 2:</b> <br /></p>
+<p [innerHTML]="vPerson.toString()"></p>
+
+<p><br /><br /><br /><b>Möglichkeit 3:</b> <br /></p>
+<p>{{ newPerson() }}</p>
+<router-outlet></router-outlet>
+<app-user></app-user>
