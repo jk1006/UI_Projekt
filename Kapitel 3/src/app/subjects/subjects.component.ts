@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SUBJECTS } from '../subjects-mock';
-import { SubjectSubscriber } from 'rxjs/internal/Subject';
+import { Subject } from '../subject';
 
 @Component({
   selector: 'app-subjects',
@@ -9,9 +9,13 @@ import { SubjectSubscriber } from 'rxjs/internal/Subject';
 })
 export class SubjectsComponent implements OnInit {
   subjects = SUBJECTS;
+  selectedSubject: Subject;
   constructor() { }
 
   ngOnInit() {
+  }
+  onSelect(subject: Subject): void{
+    this.selectedSubject = subject;
   }
 
 }

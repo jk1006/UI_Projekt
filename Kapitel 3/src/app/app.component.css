@@ -1,0 +1,16 @@
+div{
+    position: fixed;
+    width: 800px;
+}
+app-subjects{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+app-week-overview{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    left: 200;
+}

@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-const routes: Routes = [];
+import { SubjectDetailComponent } from './subject-detail/subject-detail.component'
+const routes: Routes = [
+  { path: 'subjectdetail', component: SubjectDetailComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
