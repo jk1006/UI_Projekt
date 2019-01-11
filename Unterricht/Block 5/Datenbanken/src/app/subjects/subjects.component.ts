@@ -18,6 +18,6 @@ export class SubjectsComponent {
 
   delete(subject: Subject): void {
     this.subjects = this.subjects.filter(h => h !== subject);
-    this.subjectService.deleteHero(subject).subscribe();
+    this.subjectService.deleteSubject(subject).subscribe();
   }
 }

@@ -24,7 +24,7 @@ export class SubjectService {
   getSubjects(): Observable<Subject[]> {
     return this.http.get<Subject[]>(this.url)
       .pipe(
-        catchError(this.handleError('getHeroes', []))
+        catchError(this.handleError('getSubjects', []))
       );
   }
 
@@ -39,26 +39,26 @@ export class SubjectService {
   //////// Save methods //////////
 
   /** POST: add a new subject to the server */
-  addHero (subject: Subject): Observable<Subject> {
+  addSubject (subject: Subject): Observable<Subject> {
     return this.http.post<Subject>(this.url, subject, httpOptions).pipe(
-      catchError(this.handleError<Subject>('addHero'))
+      catchError(this.handleError<Subject>('addSubject'))
     );
   }
 
   /** DELETE: delete the subject from the server */
-  deleteHero (subject: Subject | number): Observable<Subject> {
+  deleteSubject (subject: Subject | number): Observable<Subject> {
     const id = typeof subject === 'number' ? subject : subject.id;
     const url = `${this.url}/${id}`;
 
     return this.http.delete<Subject>(url, httpOptions).pipe(
-      catchError(this.handleError<Subject>('deleteHero'))
+      catchError(this.handleError<Subject>('deleteSubject'))
     );
   }
 
   /** PUT: update the subject on the server */
-  updateHero (subject: Subject): Observable<any> {
+  updateSubject (subject: Subject): Observable<any> {
     return this.http.put(this.url, subject, httpOptions).pipe(
-      catchError(this.handleError<any>('updateHero'))
+      catchError(this.handleError<any>('updateSubject'))
     );
   }
 
