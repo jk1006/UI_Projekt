@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SubjectsComponent } from './subjects/subjects.component';
-
+import { HttpModule } from '@angular/http';
+import { DBServiceService } from './dbservice.service';
 
 @NgModule({
   declarations: [
@@ -13,9 +14,10 @@ import { SubjectsComponent } from './subjects/subjects.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [DBServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
