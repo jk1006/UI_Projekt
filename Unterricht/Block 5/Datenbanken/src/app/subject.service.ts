@@ -14,7 +14,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class SubjectService {
-  private url = "http://localhost:3000/api/event/";  // URL to web api
+  private url = "api/subjects";  // URL to web api
 
   constructor(private http: HttpClient) {
   }
@@ -28,8 +28,8 @@ export class SubjectService {
       );
   }
 
-   /** GET Subjects by id. Will 404 if id not found */
-   getSubject(id: number): Observable<Subject> {
+  /** GET Subjects by id. Will 404 if id not found */
+  getSubject(id: number): Observable<Subject> {
     const url = `${this.url}/${id}`;
     return this.http.get<Subject>(url).pipe(
       catchError(this.handleError<Subject>(`getSubject id=${id}`))
@@ -39,14 +39,14 @@ export class SubjectService {
   //////// Save methods //////////
 
   /** POST: add a new subject to the server */
-  addSubject (subject: Subject): Observable<Subject> {
+  addSubject(subject: Subject): Observable<Subject> {
     return this.http.post<Subject>(this.url, subject, httpOptions).pipe(
       catchError(this.handleError<Subject>('addSubject'))
     );
   }
 
   /** DELETE: delete the subject from the server */
-  deleteSubject (subject: Subject | number): Observable<Subject> {
+  deleteSubject(subject: Subject | number): Observable<Subject> {
     const id = typeof subject === 'number' ? subject : subject.id;
     const url = `${this.url}/${id}`;
 
@@ -56,7 +56,7 @@ export class SubjectService {
   }
 
   /** PUT: update the subject on the server */
-  updateSubject (subject: Subject): Observable<any> {
+  updateSubject(subject: Subject): Observable<any> {
     return this.http.put(this.url, subject, httpOptions).pipe(
       catchError(this.handleError<any>('updateSubject'))
     );

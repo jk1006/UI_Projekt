@@ -8,7 +8,7 @@ import { Subject } from '../subject';
   styleUrls: ['./subjects.component.css']
 })
 export class SubjectsComponent {
-  subjects = [];
+  subjects: Subject[];
   id: number = 1;
   constructor(private subjectService: SubjectService) { }
 

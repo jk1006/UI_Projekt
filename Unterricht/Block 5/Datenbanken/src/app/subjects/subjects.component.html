@@ -5,11 +5,10 @@
 
 <h2>Meine Fächer</h2>
 <ul class="subjects">
-  <li *ngFor="let subjects of subjectss">
+  <li *ngFor="let subject of subjects">
     <a routerLink="/detail/{{subjects.id}}">
-      <span class="badge">{{subjects.id}}</span> {{subjects.name}}
+      <span class="badge">{{subject.id}}</span> {{subject.title}}
     </a>
-    <button class="delete" title="delete subjects"
-      (click)="delete(subjects)">x</button>
+    <button class="delete" title="delete subject" (click)="delete(subject)">X</button>
   </li>
 </ul>

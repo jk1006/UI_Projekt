@@ -1,10 +1,12 @@
-export interface Subject {
-    id: number;
-    title: string;
-    description: string;
-    startTime: string;
-    day: string;
-    endTime: string;
-    location: String;
-    isApplied: boolean;
+export class Subject {
+constructor(
+    public id: number,
+    public title: string,
+    public description: string,
+    public day: string,
+    public startTime: string,
+    public endTime: string,
+    public location: String,
+    public isApplied: boolean
+  ) {}
 }
