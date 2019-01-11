@@ -1,10 +1,10 @@
-export class Subject {
+export interface Subject {
     id: number;
-    name: string;
+    title: string;
     description: string;
-    day: string;
     startTime: string;
+    day: string;
     endTime: string;
-    room: String;
+    location: String;
     isApplied: boolean;
 }
