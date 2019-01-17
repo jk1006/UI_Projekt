@@ -1,8 +1,10 @@
 export class Subject {
     id: number;
-    name: string;
-    day: string;
+    title: string;
+    description: string;
     startTime: string;
     endTime: string;
-    room: String;
+    day: string;
+    location: string;
+    isApplied: boolean;
 }

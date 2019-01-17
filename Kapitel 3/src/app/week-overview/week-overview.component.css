@@ -2,3 +2,10 @@ table,tr,td{
     border: 1px solid black;
     border-collapse: collapse;
 }
+#mon3{
+    background-color: blue;
+}
+#titleRow{
+    font-weight: bold;
+    background-color: lightgrey;
+}

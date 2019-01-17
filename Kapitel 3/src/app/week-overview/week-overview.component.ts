@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from '../subject';
-import { SUBJECTS } from '../subjects-mock';
+
 
 @Component({
   selector: 'app-week-overview',
@@ -8,10 +8,14 @@ import { SUBJECTS } from '../subjects-mock';
   styleUrls: ['./week-overview.component.css']
 })
 export class WeekOverviewComponent implements OnInit {
-  subjects = SUBJECTS;
-  constructor() { }
+
+  public sub = "test";
+  constructor() { 
+
+   }
 
   ngOnInit() {
+    
   }
   title = 'Mein Stundenplan';
 }

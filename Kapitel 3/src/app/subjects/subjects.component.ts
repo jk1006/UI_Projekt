@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SUBJECTS } from '../subjects-mock';
+import { SubjectService } from '../subject.service';
 import { Subject } from '../subject';
 
 @Component({
@@ -8,14 +8,18 @@ import { Subject } from '../subject';
   styleUrls: ['./subjects.component.css']
 })
 export class SubjectsComponent implements OnInit {
-  subjects = SUBJECTS;
+  subjects: Subject[];
   selectedSubject: Subject;
-  constructor() { }
+  constructor(private subjectService: SubjectService) { }
 
   ngOnInit() {
+    this.getSubjects();
   }
   onSelect(subject: Subject): void{
     this.selectedSubject = subject;
+  }
+  getSubjects(): void {
+    this.subjects = this.subjectService.getSubjects();
   }
 
 }
