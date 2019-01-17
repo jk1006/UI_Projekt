@@ -1,0 +1,14 @@
+<h1>Stunden Übersicht</h1>
+<div class="form-group">
+  <button class="btn btn-success" (click)="search()">Suchen</button>
+</div>
+
+<h2>Meine Fächer</h2>
+<ul class="subjects">
+  <li *ngFor="let subject of subjects">
+    <a routerLink="/detail/{{subjects.id}}">
+      <span class="badge">{{subject.id}}</span> {{subject.title}}
+    </a>
+    <button class="delete" title="delete subject" (click)="delete(subject)">X</button>
+  </li>
+</ul>
