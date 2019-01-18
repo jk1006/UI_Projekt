@@ -19,7 +19,7 @@ export class SubjectsComponent implements OnInit {
     this.selectedSubject = subject;
   }
   getSubjects(): void {
-    this.subjects = this.subjectService.getSubjects();
+   this.subjectService.getSubjects().subscribe( subjects => this.subjects = subjects );
   }
 
 }

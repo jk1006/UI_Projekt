@@ -1,31 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Subject } from './subject';
-
+import { Observable, of} from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SubjectService {
   jsonResponse: string;
-  constructor() { }
-  getRequest(): string{
-    const Http = new XMLHttpRequest();
-    var url = 'http://localhost:3000/api/event/';
-    var jsonResponse ="";
-    var that = this;
-    Http.onreadystatechange = function(){
-      if(this.readyState == 4){
-        that.jsonResponse = this.responseText;
-      }
-    };
-    Http.open("GET", url, false);
-    Http.send();
-    return "";
+  private subjectURL = 'http://localhost:3000/api/event/';
+  constructor( private http: HttpClient ) {
   }
-  getSubjects(): Subject[]{
-    this.getRequest();
-    console.log(this.jsonResponse);
-
-    return JSON.parse(this.jsonResponse);
+  getSubjects(): Observable<Subject[]> {
+   return this.http.get<Subject[]>(this.subjectURL);
   }
 }

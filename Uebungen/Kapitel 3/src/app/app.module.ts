@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { SubjectsComponent } from './subjects/subjects.component';
 import { SubjectDetailComponent } from './subject-detail/subject-detail.component';
 import { WeekOverviewComponent } from './week-overview/week-overview.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { WeekOverviewComponent } from './week-overview/week-overview.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
