@@ -21,5 +21,9 @@ export class SubjectsComponent implements OnInit {
   getSubjects(): void {
    this.subjectService.getSubjects().subscribe( subjects => this.subjects = subjects );
   }
+  deleteSubject(subject: Subject): void {
+    this.subjects = this.subjects.filter(h => h !== subject);
+    this.subjectService.deleteSubject(subject).subscribe();
+  }
 
 }

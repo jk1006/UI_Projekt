@@ -8,10 +8,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class SubjectService {
   jsonResponse: string;
-  private subjectURL = 'http://localhost:3000/api/event/';
+  private subjectGetURL = 'http://localhost:3000/api/event/';
+  private subjectDeleteURL = 'http://localhost:3000/api/event/';
   constructor( private http: HttpClient ) {
   }
   getSubjects(): Observable<Subject[]> {
-   return this.http.get<Subject[]>(this.subjectURL);
+   return this.http.get<Subject[]>(this.subjectGetURL);
+  }
+  deleteSubject(subject: Subject) {
+      return this.http.delete<Subject>(this.subjectDeleteURL += subject.id);
   }
 }
