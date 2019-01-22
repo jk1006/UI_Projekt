@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { SubjectDetailComponent } from './subject-detail/subject-detail.component'
-const routes: Routes = [
-  { path: 'subjectdetail', component: SubjectDetailComponent }
-];
+import { RouterModule, Routes } from '@angular/router';
+import { SubjectCreationComponent } from './subject-creation/subject-creation.component';
 
+const routes: Routes = [
+  { path: 'create', component: SubjectCreationComponent }
+];
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

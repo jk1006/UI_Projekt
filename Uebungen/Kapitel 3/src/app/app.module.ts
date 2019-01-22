@@ -8,21 +8,26 @@ import { SubjectsComponent } from './subjects/subjects.component';
 import { SubjectDetailComponent } from './subject-detail/subject-detail.component';
 import { WeekOverviewComponent } from './week-overview/week-overview.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SubjectCreationComponent } from './subject-creation/subject-creation.component';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SubjectsComponent,
     SubjectDetailComponent,
-    WeekOverviewComponent
+    WeekOverviewComponent,
+    SubjectCreationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [SubjectsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

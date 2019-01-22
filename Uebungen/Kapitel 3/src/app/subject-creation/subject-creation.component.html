@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Neues Fach anlegen:</h1>
+  <form (ngSubmit)="onSubmit()" #subjectForm="ngForm">
+    <label for="title">Name </label>
+    <input type="text" class="form-control" id="title" required [(ngModel)]="subject.title" name="title">
+    <label for="description">Beschreibung </label>
+    <input type="text" class="form-control" id="description" required [(ngModel)]="subject.description" name="description">
+    <label for="day">Tag </label>
+    <select class="form-control" id="day" required [(ngModel)]="subject.day" name="day">
+      <option *ngFor="let day of days" [value]="day">{{day}}</option>
+    </select>
+    <label for="location">Raum </label>
+    <input type="text" class="form-control" id="location" required [(ngModel)]="subject.location" name="location">
+    <label for="startTime">Beginn </label>
+    <input type="text" class="form-control" id="startTime" required [(ngModel)]="subject.startTime" name="startTime">
+    <label for="endTime">Beginn </label>
+    <input type="text" class="form-control" id="endTime" required [(ngModel)]="subject.endTime" name="endTime">
+  </form>
+    <button (click)="createSubject()">Create Subject</button>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Subject } from '../subject';
+import { SubjectsComponent } from '../subjects/subjects.component';
 
 @Component({
   selector: 'app-subject-detail',
@@ -9,9 +10,11 @@ import { Subject } from '../subject';
 export class SubjectDetailComponent implements OnInit {
   @Input() subject: Subject;
 
-  constructor() { }
+  constructor(private subjectsComponent: SubjectsComponent ) { }
 
   ngOnInit() {
   }
-
+  deleteSubject(subject: Subject): void {
+    this.subjectsComponent.deleteSubject(subject);
+  }
 }
