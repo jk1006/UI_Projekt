@@ -1,12 +1,12 @@
-<div *ngIf="subject">
+<div *ngIf="subject" class="details">
 
-  <h2>{{subject.name}} Details</h2>
+  <h2>{{subject.title}} Details</h2>
   <div><span>Id: </span>{{subject.id}}</div>
   <div><span>Name: </span>{{subject.title}}</div>
   <div><span>Tag: </span>{{subject.day}}</div>
   <div><span>Beginn: </span>{{subject.startTime}}</div>
   <div><span>Ende: </span>{{subject.endTime}}</div>
   <div><span>Raum: </span>{{subject.location}}</div>
-  <button class="delete" title="delete subject"
+  <button class="BUTTON_DEFAULT" title="delete subject"
   (click)="deleteSubject(subject)">Fach löschen</button>
 </div>

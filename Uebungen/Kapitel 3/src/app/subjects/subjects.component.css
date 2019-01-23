@@ -3,7 +3,6 @@
   color: white;
 }
 .subjects {
-  margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
   width: 15em;
@@ -13,36 +12,33 @@
   position: relative;
   left: 0;
   background-color: #EEE;
-  margin: .5em;
+  margin: .5em 0 0 0;
   padding: .3em 0;
-  height: 2.5em;
   border-radius: 4px;
   width: 20em;
 }
-.subjects li.selected:hover {
-  background-color: #BBD8DC !important;
-  color: white;
-}
 .subjects li:hover {
-  color: #607D8B;
-  background-color: #DDD;
+  color: rgb(0, 0, 0);
+  background-color: #BBB;
   left: .1em;
 }
-.subjects .text {
-  position: relative;
-  top: -3px;
-}
-.subjects .badge {
-  display: inline-block;
-  font-size: small;
+.subjects li.selected {
+  background-color: rgba(56, 124, 56, 0.74) !important;
   color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color: #607D8B;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
+}
+.circle {
+  float: left;
+  width: 2.5em;
   height: 2.5em;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 2.5em;
+  text-align: center;
+  background: rgb(7, 145, 224);
+}
+.subjects .title{
+  margin: 0 0 0 3em;
+  height: 2.5em;
+  line-height: 2.5em;
+  top: -1em
 }

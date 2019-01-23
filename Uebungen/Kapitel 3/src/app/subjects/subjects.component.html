@@ -1,10 +1,9 @@
 <h2>Verfügbare Fächer</h2>
-<ul class="subjects">
-  <li *ngFor="let subject of subjects"
-  [class.selected]="subject === selectedSubject"
-  (click)="onSelect(subject)">
-    <span class="badge">{{subject.id}}</span> {{subject.title}}
+<ol class="subjects">
+  <li *ngFor="let subject of subjects" [class.selected]="subject === selectedSubject" (click)="onSelect(subject)">
+    <div class="circle">{{subject.id}}</div>
+    <div class="title">{{subject.title}}</div>
   </li>
-</ul>
-<button (click)="createSubject()">Create Subject</button>
+</ol>
+<button class="BUTTON_DEFAULT" (click)="createSubject()">Create Subject</button>
 <app-subject-detail [subject]="selectedSubject"></app-subject-detail>

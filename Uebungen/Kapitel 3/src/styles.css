@@ -1,2 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+.BUTTON_DEFAULT {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 5px;
+    margin: 0.5em 0 0 0;
+    line-height: 20px;
+    background-color: #5CB85C;
+    border: solid #4CAE4C 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+ }
+ 
+ .BUTTON_DEFAULT:hover {
+    background: #449D44;
+    text-decoration: none;
+    border: solid #398439 1px;
+ }
