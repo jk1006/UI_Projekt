@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoggerService } from './Logger/logger.service';
-import { ConsoleLoggerService } from './Logger/console-logger.service';
 import { UserComponent } from './user/user.component';
 
 @NgModule({
@@ -16,7 +14,7 @@ import { UserComponent } from './user/user.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [ { provide: LoggerService, useClass: ConsoleLoggerService } ],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

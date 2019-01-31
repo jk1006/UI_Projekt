@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Uebung03": {
+    "uebung04": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Uebung03",
+            "outputPath": "dist/uebung04",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -57,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Uebung03:build"
+            "browserTarget": "uebung04:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Uebung03:build:production"
+              "browserTarget": "uebung04:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Uebung03:build"
+            "browserTarget": "uebung04:build"
           }
         },
         "test": {
@@ -102,7 +102,7 @@
         }
       }
     },
-    "Uebung03-e2e": {
+    "uebung04-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -111,11 +111,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Uebung03:serve"
+            "devServerTarget": "uebung04:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Uebung03:serve:production"
+              "devServerTarget": "uebung04:serve:production"
             }
           }
         },
@@ -131,5 +131,5 @@
       }
     }
   },
-  "defaultProject": "Uebung03"
+  "defaultProject": "uebung04"
 }

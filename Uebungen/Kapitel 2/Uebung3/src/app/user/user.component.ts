@@ -16,39 +16,4 @@ export class UserComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-
-  toString(): string {
-    return (
-      '<div style="text-align:left"><p>Nachname: ' +
-      this.vNachname +
-      "<br />Vorname: " +
-      this.vVorname +
-      " <br/>Studiengang: " +
-      this.vStudiengang +
-      "<br />Fachsemester: " +
-      this.vFachsemester +
-      " <br />Student: " +
-      this.vStudent +
-      " <br />Bildungseinrichtung: " +
-      this.vBildungseinrichtung +
-      "</p></div>"
-    );
-  }
-
-  toString2(): string {
-    return (
-      "Nachname: " +
-      this.vNachname +
-      "\nVorname: " +
-      this.vVorname +
-      "\nStudiengang: " +
-      this.vStudiengang +
-      "\nFachsemester: " +
-      this.vFachsemester +
-      "\nStudent: " +
-      this.vStudent +
-      "\nBildungseinrichtung: " +
-      this.vBildungseinrichtung
-    );
-  }
 }
