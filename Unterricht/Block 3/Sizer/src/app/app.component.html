@@ -1,0 +1,9 @@
+<h1>One Way</h1>
+<app-sizer-one-way [(size)]="fontSizePx"></app-sizer-one-way>
+
+<!--
+<h1>Two Way</h1>
+<app-sizer-two-way [size]="fontSizePx" (sizeChange)="fontSizePx=$event"></app-sizer-two-way>
+-->
+
+<div [style.font-size.px]="fontSizePx">Resizable Text</div>
